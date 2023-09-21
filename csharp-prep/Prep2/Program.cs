@@ -19,7 +19,7 @@ class Program
         }
         else if (grade >= 70 && grade < 80)
         {
-            string letter_g = "c";
+            string letter_g = "C";
             Console.WriteLine($"Your grade is {letter_g}");
         }
         else if (grade >= 60 && grade < 70)
