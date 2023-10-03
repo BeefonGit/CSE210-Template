@@ -1,6 +1,6 @@
 using System.Security.Cryptography.X509Certificates;
 
-public class job {
+public class Job {
     public string _company;
     public string _jobTitle;
     public int _startYear;
