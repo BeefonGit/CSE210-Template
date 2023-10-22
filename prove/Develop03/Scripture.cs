@@ -19,10 +19,11 @@ public class Scripture{
                 }
                 string cov_word = string.Join("", cov_word_list);
                 covered.Add(cov_word);
-                index += 1;
+                index++;
             }
             else {
                 covered.Add(w.GetText());
+                index++;
             }
         }
     return string.Join(" ", covered);

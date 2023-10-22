@@ -58,13 +58,13 @@ class Program
             covered.SetText(scripture.GetText());
             bool play = true;
             while(play){
-                // Console.Clear();
+                Console.Clear();
+                Console.WriteLine($"{reference.GetBook()} {reference.GetChapter()}:{reference.GetBeginningVerse()}-{reference.GetEndVerse()}");
                 covered.Display();
                 Console.WriteLine("\n");
                 string entry = Console.ReadLine();
                 if (entry == "") {
                     string cov_display = covered.Cover();
-                    Console.WriteLine(cov_display);
                     List<string> cov_list = cov_display.Split(" ").ToList();
                     List<Word> cov_wlist = new();
                     foreach(string str in cov_list) {
