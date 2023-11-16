@@ -29,27 +29,3 @@ class CharacterGenerator
     }
 }
 
-class Program
-{
-    static void Main()
-    {
-        CharacterGenerator characterGenerator = new CharacterGenerator();
-
-        Console.WriteLine("Choose an archetype:");
-        Console.WriteLine("1. Acolyte");
-        Console.WriteLine("2. Fighter");
-        Console.WriteLine("3. Ranger");
-
-        int archetypeChoice = int.Parse(Console.ReadLine());
-
-        //int levelChoice = int.Parse(Console.ReadLine());
-        int level = 
-
-        string asciiArt = characterGenerator.GenerateCharacter(archetypeChoice, level);
-
-        Console.WriteLine("Character Power Level:");
-        Console.WriteLine(asciiArt);
-    }
-
-    
-}
