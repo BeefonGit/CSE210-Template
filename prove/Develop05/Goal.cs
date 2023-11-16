@@ -10,6 +10,17 @@ public abstract class Goal
     {
         return _goalname;
     }
+    private string _goaldescription;
+
+    public void SetGoalDescription(string SetGoalDescription)
+    {
+        _goalname = SetGoalDescription;
+    }
+    public string GetGoalDescription()
+    {
+        return _goaldescription;
+    }
+
     private int _goalpoints;
     public void SetGoalName(int GoalPoints)
     {
