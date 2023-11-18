@@ -29,6 +29,7 @@ class CharacterGenerator
     }
 }
 
+<<<<<<< HEAD
 // class Program This Cannot exist as a program class
 class Animate
 {
@@ -54,3 +55,5 @@ class Animate
 
     
 }
+=======
+>>>>>>> 8ac7f379bc4d85615d99ae19ab248aad46ce7177
