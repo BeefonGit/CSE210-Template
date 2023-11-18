@@ -22,7 +22,7 @@ public abstract class Goal
     }
 
     private int _goalpoints;
-    public void SetGoalName(int GoalPoints)
+    public void SetGoalPoints(int GoalPoints)
     {
         _goalpoints = GoalPoints;
     }
@@ -30,5 +30,22 @@ public abstract class Goal
     {
         return _goalpoints;
     }
+    private int _goaltotalpoints = 0;
+
+    public int GetTotalPoints()
+    {
+        return _goaltotalpoints;
+    }
+
+    private bool _completed = false;
+    public void SetCompleted()
+    {
+        _completed = true;
+    } 
+    public bool GetCompleted()
+    {
+        return _completed;
+    }
+    
     public abstract void Complete();
 }

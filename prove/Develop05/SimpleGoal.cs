@@ -1,8 +1,10 @@
 public class SimpleGoal : Goal
 {
-    bool condition = false;
+    private int _goaltotalpoints = 0;
+
     public override void Complete()
     {
-        condition = true;
+        _goaltotalpoints += GetGoalPoints();
+        SetCompleted();
     }
 }

@@ -1,5 +1,4 @@
 using System.Dynamic;
-using system;
 
 class CharacterLevel
 {

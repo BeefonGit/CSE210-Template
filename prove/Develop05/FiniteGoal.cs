@@ -6,17 +6,23 @@ public class FiniteGoal : Goal
     {
         return _repeats;
     }
-   public void SetRepeat(int repeat)
-   {
-      _repeats = repeat;
-   } 
-
+ 
+    public void SetRepeats(int repeat)
+    {
+       _repeats = repeat;
+    } 
     private int _goaltotalpoints = 0;
+
     public override void Complete()
     {
         _goaltotalpoints += GetGoalPoints();
+        AddRepeatTracker();
+        if (_repeatTracker == _repeats)
+        {
+            SetCompleted();
+            _goaltotalpoints += GetGoalPoints() * _repeats;
+        }
     }
-
 
     private int _repeatTracker;
 
@@ -24,19 +30,9 @@ public class FiniteGoal : Goal
     {
         return _repeatTracker;
     }
+
     public void AddRepeatTracker()
-        {
-            _repeatTracker += 1;
-        }
-
-    public 
-
-    public override void Complete()
     {
-        if(_repeatTracker == _repeats)
-        {
-            
-        }
+        _repeatTracker += 1;
     }
-
 }

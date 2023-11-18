@@ -29,7 +29,8 @@ class CharacterGenerator
     }
 }
 
-class Program
+// class Program This Cannot exist as a program class
+class Animate
 {
     static void Main()
     {
