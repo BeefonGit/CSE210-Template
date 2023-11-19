@@ -1,5 +1,14 @@
 public abstract class Goal
 {
+    private int _goaltype;
+    public void SetGoalType(int type)
+    {
+        _goaltype = type;
+    }
+    public int GetGoalType()
+    {
+        return _goaltype;
+    }
     private string _goalname;
 
     public void SetGoalName(string GoalName)
@@ -14,7 +23,7 @@ public abstract class Goal
 
     public void SetGoalDescription(string SetGoalDescription)
     {
-        _goalname = SetGoalDescription;
+        _goaldescription = SetGoalDescription;
     }
     public string GetGoalDescription()
     {
@@ -30,19 +39,27 @@ public abstract class Goal
     {
         return _goalpoints;
     }
-    private int _goaltotalpoints = 0;
+    public int Goaltotalpoints;
+    public void SetGoalTotalPoints(int points)
+    {
+        Goaltotalpoints = points;
+    }
+
 
     public int GetTotalPoints()
     {
-        return _goaltotalpoints;
+        return Goaltotalpoints;
     }
-
-    private bool _completed = false;
+    private int _completed = 0;
     public void SetCompleted()
     {
-        _completed = true;
+        _completed += 1;
     } 
-    public bool GetCompleted()
+    public void AssignCompleted(int completed)
+    {
+        _completed = completed;
+    }
+    public int GetCompleted()
     {
         return _completed;
     }

@@ -1,5 +1,5 @@
 
-using System.Dynamic
+using System.Dynamic;
 using System;
 
 class CharacterLevel
