@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-using System.Dynamic;
-=======
+
+using System.Dynamic
 using System;
->>>>>>> 8ac7f379bc4d85615d99ae19ab248aad46ce7177
 
 class CharacterLevel
 {

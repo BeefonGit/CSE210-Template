@@ -1,15 +1,31 @@
 using System;
+using System.Reflection;
 
 class Program
 {
     static void Main(string[] args)
     {
+        
+        
         List<Goal> goals = new();
         Console.WriteLine("Welcome to your Eternal Quest!");
+//
+        CharacterGenerator GenerateCharacter = new CharacterGenerator();
+        CharacterLevel level = new CharacterLevel();
+        l
+        ReturnCharacterLevel(score)
+        Console.WriteLine(GenerateCharacter.GenerateCharacter(CharacterLevel ));
+
+        Console.WriteLine("Here is your character, level him up by completing tasks");
+        
+        
+//        
         Console.WriteLine("Menu\n1. Display Checklist\n2. Display Score\n3. Complete Goal\n4. Create New Goal\n5. Quit");
         string Input = Console.ReadLine();
         while (true)
         {
+
+
             if (Input == "1")
             {
                 int iteration = 0;
