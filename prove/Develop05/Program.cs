@@ -36,10 +36,12 @@ class Program
         Console.WriteLine("Here is your character, level him up by completing tasks");
         
         CharacterAnimate(Score(goals));
+        Thread.Sleep(3000);
         while (true)
         {
-            CharacterAnimate(Score(goals));
+            
             Console.Clear();
+            CharacterAnimate(Score(goals));
             Console.WriteLine("Menu\n1. Display Checklist\n2. Display Score\n3. Complete Goal\n4. Create New Goal\n5. Load up previous Goals\n6. Quit");
             string Input = Console.ReadLine();
             Console.Clear();            
