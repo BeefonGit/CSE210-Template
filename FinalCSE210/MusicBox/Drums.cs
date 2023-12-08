@@ -1,7 +1,7 @@
 using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 
-class Drums
+public class Drums
 {
     private WaveStream _bass;
     public void SetBass(string note_file)
@@ -33,34 +33,4 @@ class Drums
     {
         return _snare;
     }
-
-public void PlaySounds(params WaveStream[] sounds)
-    {
-        List<WaveOutEvent> waveOuts = new List<WaveOutEvent>();
-
-        foreach (var sound in sounds)
-        {
-            WaveOutEvent waveOut = new WaveOutEvent();
-            var waveProvider = sound;
-            waveOut.Init(waveProvider);
-            waveOuts.Add(waveOut);
-        }
-        foreach(WaveOutEvent waveOut in waveOuts)
-        {
-            waveOut.Play();
-        }
-
-        foreach (WaveOutEvent waveOut in waveOuts)
-        {
-            while (waveOut.PlaybackState == PlaybackState.Playing)
-            {
-                Thread.Sleep(10);
-            }
-            waveOut.Dispose();
-        }
-        foreach(WaveStream sound in sounds)
-        {
-            sound.Position = 0;
-        }
-    }    
 }
