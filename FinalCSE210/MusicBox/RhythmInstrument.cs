@@ -17,7 +17,7 @@ public class RhythmInstrument : Instrument
     {
         return _chords;
     }
-    public List<WaveStream> GenerateChord(string chord, Dictionary<string, List<string>> scale)
+    public override List<WaveStream> GenerateChord(string chord, Dictionary<string, List<string>> scale)
     {
         List<WaveStream> notes = new List<WaveStream>{
             GetNote(scale[chord][0]), GetNote(scale[chord][1]), GetNote(scale[chord][2])

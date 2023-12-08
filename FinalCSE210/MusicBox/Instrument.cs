@@ -1,14 +1,13 @@
 using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 
-public class Instrument
+public abstract class Instrument
 {
     private Dictionary<string, WaveStream> _notes = new Dictionary<string, WaveStream>(); 
     public void SetNotes(Dictionary<string, WaveStream> notes)
     {
         _notes = notes;
     }
-    // public void SetNote()
     public Dictionary<string, WaveStream> GetNotes()
     {
         return _notes;
@@ -17,4 +16,5 @@ public class Instrument
     {
         return _notes[index];
     }
+    public abstract List<WaveStream> GenerateChord(string chord, Dictionary<string, List<string>> scale);
 }

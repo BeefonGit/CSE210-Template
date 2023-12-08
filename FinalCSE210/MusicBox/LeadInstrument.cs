@@ -18,7 +18,7 @@ public class LeadInstrument : Instrument
         return _chords;
     }
 
-    public List<WaveStream> GenerateMelody(string chord, Dictionary<string, List<string>> scale)
+    public override List<WaveStream> GenerateChord(string chord, Dictionary<string, List<string>> scale)
     {
         Random rnote1 = new Random();
         Random rnote2 = new Random();

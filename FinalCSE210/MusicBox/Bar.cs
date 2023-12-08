@@ -27,7 +27,7 @@ public class Bar
             step1.Add(drums.GetBass());
             step1.Add(drums.GetHihat());
             steps.Add(step1);
-            List<WaveStream> melody = leadInstrument.GenerateMelody(scale[chordsig], leadInstrument.GetChords());
+            List<WaveStream> melody = leadInstrument.GenerateChord(scale[chordsig], leadInstrument.GetChords());
             foreach(WaveStream note in melody)
             {
                 List<WaveStream> step = new()
